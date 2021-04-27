@@ -1,0 +1,69 @@
+@charset "EUC-KR";
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+#array3{
+	width:800px;
+	margin:50px auto;
+}
+
+/*왼쪽---*/
+#array3 .left{
+	width:300px;
+	float:left;
+	border:3px solid #aaa;
+	padding:30px;
+	min-height:250px;
+}
+.left form>label{
+	display: inline-block;
+	width:70px;
+	text-align:right;
+}
+.left form>input[type=text]{
+	width:80px;
+}
+.left .btn_zone{
+	text-align:center;
+}
+.left hr{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+/*오른쪽---*/
+#array3 .right{
+	width:500px;
+	float:right;
+	border:3px solid #aaa;
+	padding:30px;
+	min-height:250px;
+}
+.right .title>span{
+	display:inline-block;
+	line-height:24px;
+}
+.right>.title{
+	background-color:#ccc;
+	padding-left:10px;
+}
+.title>.mid{ width: 80px; }
+.title>.mid{ width: 80px; }
+.title>.mid{ width: 80px; }
+.title>.mid{ width: 80px; }
+.title>.mid{ width: 80px; }
+#items div:hover{
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+/*상태표시줄---*/
+#array3 .status{
+	clear:both;
+	background-color:#ddd;
+	color:#f00;
+	text-align:center;
+	padding:6px 0;
+}
