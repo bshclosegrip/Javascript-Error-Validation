@@ -1,4 +1,4 @@
 # Javascript-Error-Validation
-* to fix error code of eclipse
+* To Fix Error of Javascript
 * Ajax Documentation
 * JSON Documentation
