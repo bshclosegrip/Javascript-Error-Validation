@@ -7,15 +7,14 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>test3</title>
 </head>
 <body>
 <%!
 	int a; //서블릿 클래스의 필드 a가 선언된 것임. //a는 전역형
-	public void output(HttpServletResponse rep, String s){
+	public void output(HttpServletResponse rep, String s) throws Exception{
 		PrintWriter out = rep.getWriter();
 		out.print(s);
-		
 	}
 %>
 <%
