@@ -1,0 +1,25 @@
+/* product */
+CREATE SEQUENCE seq_product;
+CREATE TABLE product(
+  serial NUMBER,
+  gubun varchar(20),
+  nal DATE,
+  pcode varchar(30),
+  pname varchar(100),
+  ea number(10),
+  price number(10),
+  amt number(20),
+  mid varchar(30)
+);
+/* sample DATE 5,000건 */
+declare
+BEGIN
+	FOR i IN 1..5000 LOOP
+	   INSERT INTO product(serial, gubun, nal, pcode, pname, ea, price, amt, mid)
+	   values(seq_product.nextval, '입고', sysdate, 'a001', '컴퓨터', 100, 10000, 1000000, 'a001');
+	END LOOP;
+	COMMIT;	
+END;
+
+
+
