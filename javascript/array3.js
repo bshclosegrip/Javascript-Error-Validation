@@ -1,14 +1,13 @@
 /**
- * 성적 처리 위한 스크립트
- * 2021.04 
+ * 성적 처리를 위한 스크립트
+ * 2021.04(jobtc)
  */
- 
 var ff = document.frm;
 var btn = document.getElementById('btnCompute');
-var brnSave = document.getElementById('btnSave');
+var btnSave = document.getElementById('btnSave');
 var btnOutput = document.getElementById('btnOutput');
-var info = document.getElementById('status');
 
+var info = document.getElementById('info');
 var arMid = [];
 var arKor = [];
 var arMat = [];
@@ -20,16 +19,16 @@ btn.onclick = function(){
 	var avg = 0;
 	
 	if(ff.mid.value == ''){
-		info.innerHTML = '아이디를 입력하세요...';
+		info.innerHTML = '아이디를 입력하세요...';	
 		ff.mid.focus();
-		return;
-	} else if(ff.kor.value == '') {
-		info.innerHTML = '국어 성적을 입력하세요...';
+		return;	
+	}else if(ff.kor.value == ''){
+		info.innerHTML = '국어성적을 입력하세요...';
 		ff.kor.focus();
 		return;
-	} else if(ff.mat.value == '') {
-		info.innerHTML = '수학 성적을 입력하세요...';
-		ff.kor.focus();
+	}else if(ff.mat.value == ''){
+		info.innerHTML = '수학성적을 입력하세요...';
+		ff.mat.focus();
 		return;
 	}
 	
@@ -40,14 +39,14 @@ btn.onclick = function(){
 }
 
 btnSave.onclick = function(){
-	var i = arMid.length;	
+	var i = arMid.length;
 	arMid[i] = frm.mid.value;
 	arKor[i] = frm.kor.value;
 	arMat[i] = frm.mat.value;
 	arTot[i] = frm.tot.value;
 	arAvg[i] = frm.avg.value;
 	
-	info.innerHTML = (i+1) + '번째 데이터가 저장되었습니다.';
+	info.innerHTML = (i+1) +  '번째 데이터가 저장되었습니다.';
 	
 	frm.mid.value = '';
 	frm.kor.value = '';
@@ -61,16 +60,34 @@ btnOutput.onclick = function(){
 	var str = '';
 	var items = document.getElementById('items');
 	
-	for(var i = 0; i < arMid.length; i ++) {
+	for(var i=0 ; i<arMid.length ; i++){
 		str += '<div>';
-		str += ' <span class = "mid">' + arMid[i] + '</span>';
-		str += ' <span class = "kor">' + arKor[i] + '</span>';
-		str += ' <span class = "mat">' + arMat[i] + '</span>';
-		str += ' <span class = "tot">' + arTot[i] + '</span>';
-		str += ' <span class = "avg">' + arAvg[i] + '</span>';
+		str += '  <span class="mid">' + arMid[i] + '</span>';
+		str += '  <span class="kor">' + arKor[i] + '</span>';
+		str += '  <span class="mat">' + arMat[i] + '</span>';
+		str += '  <span class="tot">' + arTot[i] + '</span>';
+		str += '  <span class="avg">' + arAvg[i] + '</span>';
 		str += '</div>';
 	}
 	
 	items.innerHTML = str;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

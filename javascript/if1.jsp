@@ -6,14 +6,14 @@
 <meta charset="UTF-8">
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>if1</title>
-<div id = 'if1'>
-	<input type = 'text' id = 'score'/>
-	<input type = 'text' id = 'kor'/>
-	<input type = 'text' id = 'mat'/>
-	<input type = 'button' value = '확인' id = 'btn'/>
+</head>
+<body>
+<div id='if1'>
+<h2>IF</h2>
+	<input type='text' id='score'/>
+	<input type='button' value='확인' id='btn'/>
 	<br/>
-	<input type = 'text' id = 'result'/>
-	<input type = 'text' id = 'res'/>
+	<input type='text' id='result'/>
 </div>
 <script>
 	var score = document.getElementById('score');
@@ -27,40 +27,13 @@
 		}else{
 			result.value='불합격';
 		}
+		
 	}
+	
+	
 </script>
-</head>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -10,49 +10,67 @@
 	*{
 		margin:0;
 		padding:0;
-		box-sizing:border-box;
+		box-sizing: border-box;
+		
 	}
 	#for{
-		position:relative;
+		position: relative;
 		margin:50px;
 	}
 	#for #btn{
-		top:36px;
+		top:34px;
 		position:absolute;
 		width:80px;
-		height:41px;         
+		height:41px;
 	}
 	#for #result{
 		border:2px solid #aaa;
 		margin-top:10px;
-		width:240px;
+		width: 240px;
 		height:100px;
 	}
 </style>
 </head>
 <body>
-<div id = 'for'>
+<div id='for'>
 	<h2>for</h2>
 	<label>X</label>
-	<input type = 'text' id = 'X' value = '1' />
-	<input type = 'button' id = 'btn' value = '계산' />
+	<input type='text' id='x' value='1'/>
+	<input type='button' id='btn' value='계산' />
 	<br/>
 	<label>Y</label>
-	<input type = 'text' id = 'y' value = '10' />
-	<div id = 'result'></div>
+	<input type='text' id='y' value='10'/>
+	<div id='result'></div>
 </div>
 <script>
 	var btn = document.getElementById('btn');
 	btn.onclick = function(){
-		var x = Number(document.getElementById('X').value);
+		var x = Number(document.getElementById('x').value);
 		var y = Number(document.getElementById('y').value);
 		var result = document.getElementById('result');
 		var sum = 0;
 		for(var i=x ; i<=y ; i++){
-			sum = sum + i;	
+			sum = sum + i;
 		}
+		
 		result.innerHTML = sum;
 	}
+
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

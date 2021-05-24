@@ -8,21 +8,24 @@
 <title>forin</title>
 </head>
 <body>
-<div id = 'forin'>
+<div id='forin'>
 	<script>
-		var array = [123, 45, 445, 56, 56, 78, 786];
-		var sum = 0;
-		var avg = 0;
-		var length = array.length;
+		var array = [234,235,234,2,6,36,34,2,34,24,24];
+		var sum=0;
+		var avg=0;
+		var length = array.length; //배열의 갯수
 		for(var i in array){
 			sum += array[i];
 		}
-		avg = sum / length;
+		avg = sum/length;
 		
-		console.log('합계 : ' + sum);
-		console.log('평균 : ' + avg);
+		console.log('합계:' + sum);
+		console.log('평균:' + avg);
 		console.log(array);
+		console.table(array);
+	
 	</script>
+
 </div>
 </body>
 </html>

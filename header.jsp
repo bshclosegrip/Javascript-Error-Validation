@@ -3,7 +3,7 @@
     
 <header id='header'>
 	<nav id='main_menu'>
-		<a href='#'>메뉴1</a>
+		<a href='index.jsp'>HOME</a>
 		<a href='#'>메뉴2</a>
 		<a href='#'>메뉴3</a>
 		<a href='#'>메뉴4</a>

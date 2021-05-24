@@ -5,9 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>while2</title>
-
 <style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing: border-box;
+	}
 	#while2{
 		width:450px;
 		margin:40px auto;
@@ -19,7 +22,7 @@
 		margin-top:20px;
 		margin-bottom:20px;
 		padding:15px;
-		color:#f0f; 
+		color:#00f;
 	}
 	#while2 #result{
 		margin-top:20px;
@@ -29,48 +32,65 @@
 	}
 </style>
 </head>
-
-<div id = 'while2'>
-
+<body>
+<div id='while2'>
+	<h2>while</h2>
 	<fieldset>
 		<legend>while example</legend>
 		<div>
-			두 수 x, y를 입력받아 두 수 사이의 수 중
-			4 또는 7의 배수의 갯수 출력
+			두 수 x,y을 입력받아 두 수 사이의 수 중 4또는 7의 배수의 갯수를 출력하시오. 
 		</div>
 	</fieldset>
-	
-	<div class = 'body'>
+	<div class='body'>
 		<label>X</label>
-		<input type = 'text' id = 'x' value = ' '/>	
+		<input type='text' id='x' value='1'/>
 		<br/>
 		<label>Y</label>
-		<input type = 'text' id = 'y' value = ' '/>	
-		<input type = 'button' id = 'btn' value = '실행'/>	
-		<div id = 'result'></div>
+		<input type='text' id='y' value='100'/>
+		<br/>
+		<input type='button' id='btn' value='실행'/>
+		<div id='result'></div>
 	</div>
-</div>	
-	
-<script>		
+</div>
+<script>
 	var btn = document.getElementById('btn');
+	var result = document.getElementById('result');
+	var start=0; // x,y중에 항상 작은값
+	var end=0; // x,y중에 항상 큰값
+	var count = 0; // 배수의 갯수
 	
-	btn.onclick = function() {
+	btn.onclick = function(){
+		count=0;
 		var x = Number(document.getElementById('x').value);
 		var y = Number(document.getElementById('y').value);
-		var result = document.getElementById('result');
-		var num = 0;
-	
-		while (x <= y) {
-			if (x % 4 == 0 || y % 7 == 0) {
-				num++;
-				x++;
-			} else {
-				x++;
+		start = (x<y)? x : y;
+		end   = (x>y)? x : y;
+		
+		while(start<=end){
+			if( start%4==0 || start%7==0){
+				count++;		
 			}
+			start++;
 		}
-		result.innerHTML = num;
+		result.innerHTML = '4 또는 7의 배수의 갯수 :' + count;
 	}
+		
+	
+	
 </script>
-
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

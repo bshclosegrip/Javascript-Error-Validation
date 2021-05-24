@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+#object_array{
+	width:700px;
+	min-height:400px;	
+	margin:40px auto;
+	padding:20px;
+	border : 3px solid #aaa;
+	border-radius:10px;
+	position: relative;
+}
+
+#object_array h2{
+	color : #44f;
+	font-size:22pt;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+#object_array .left{
+	width:50%;
+	height:240px;
+	float:left;
+	padding:10px;
+	border:1px solid #ccc;
+}
+
+.left form>label{
+	display: inline-block;
+	width:60px;
+}
+.left form>hr{
+	margin : 20px auto;
+}
+.left .btn_zone{
+	text-align: center;
+	
+}
+
+#object_array .right{
+	width:50%;
+	height:240px;
+	float:right;
+	padding:10px;
+	border:1px solid #ccc;
+}
+
+.right .title{
+	background-color:#888;
+	color : #fff;
+	padding:4px 5px;
+}
+
+.right .items{
+	padding-left : 5px;
+	height: 190px;
+	overflow-y:scroll;
+}
+.right span{
+	display: inline-block;
+}
+.right .mid { width: 120px; }
+.right .mname{width: 150px;}
+
+.right .item:hover{
+	background-color:#ddd;
+}
+
+
+
+#object_array #btnList{
+	color:#00f;
+	position:absolute;
+	right:17px;
+	bottom:13px;
+}
+
+
+
+
+

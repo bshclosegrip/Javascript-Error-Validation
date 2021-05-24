@@ -8,62 +8,26 @@
 <title>oper</title>
 </head>
 <body>
-<div id = 'oper'>
+<div id='oper'>
 <script>
-	var a = 30;
-	var b = 20;
-	var result = 0;
+	var a=30;
+	var b=20;
+	var result=0;
 	
 	result = (a>b)?a :b;
 	document.write(result);
 	
-	// age 지역 변수에 임의의 나이 값을 대입 18세 이상 '성년' 아니면 '미성년'
-	
+	// age 지역 변수에 임의의 나이값을 대입하여 18세 이상이면 '성년' 아니면, '미성년'을
+	// 화면에 출력하시오(3항 연산자 사용)
 	document.write('<hr/>');
-	var age = 20;
-	result = (age>=8)?'미성년' : '성년';
+	var age=18;
+	result = (age>=18)?'성년' : '미성년';
 	document.write(result);
 	
+	
+	
 </script>
+
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

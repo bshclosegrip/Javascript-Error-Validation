@@ -8,20 +8,19 @@
 <title>onfocus | onblur</title>
 </head>
 <body>
-<div id = 'focus'>
-	<textarea rows = "10" cols = "60" id = "tt"></textarea>
-
-	
+<div id='focus'>
+	<textarea rows="10" cols="60" id='tt'></textarea>
 </div>
 <script>
 var tt = document.getElementById('tt');
 tt.onfocus = function(){
-	tt.style.backgroundColor = '#99f';
+	tt.style.backgroundColor='#99f';
 }
 
 tt.onblur = function(){
 	tt.style.backgroundColor = '';
 }
+
 </script>
 </body>
 </html>

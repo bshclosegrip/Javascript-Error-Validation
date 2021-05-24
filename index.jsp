@@ -12,10 +12,12 @@
 <body>
 <%
 	// 기본 include 페이지
-	String border = "./board/search.jsp";
+	//String border = "./member/search.jsp";
+	String border = "./member/member.do";
 	String stock = "./product/search.jsp";
 	String gb = "./guestbook/list.jsp";
 
+	request.setAttribute("border", border);
 	
 %>
 	<div id='index'>
@@ -29,7 +31,7 @@
 			<div id='sub_menu'>서브메뉴</div>
 			<div id='middle'>
 				<div id='border'>
-					<jsp:include page="<%=border %>"/>
+					
 				</div>
 				<div id='stock'>
 					<jsp:include page="<%=stock %>"/>
@@ -44,6 +46,11 @@
 		<%@include file="footer.jsp" %>	
 
 	</div>
+	
+	<script>
+		$('#border').load('${border}', 'job=search');
+	
+	</script>
 </body>
 </html>
 

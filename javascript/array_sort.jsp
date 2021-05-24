@@ -6,33 +6,41 @@
 <meta charset="UTF-8">
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>array_sort</title>
-<style type="text/css">
-
-</style>
 </head>
 <body>
-<div id = 'array_sort'>
+<div id='array_sort'>
 	<fieldset>
 		<legend>배열 정렬</legend>
 		<div>
-			자바스크립트의 sort()함수는 기본적으로 정렬시 문자열로 인식 정렬
-			숫자형 정렬 : 함수의 매개변수로 전달
+			자바스크립트의 sort()함수는 기본적으로 정렬시 문자열로 인식하여 정렬하게됨. 
+			따라서 숫자형 데이터형으로 정렬하기 위해서는 사용자가 정렬 방식을 sort()함수의
+			매개변수로 전달해 주어야 함.
 		</div>
 	</fieldset>
 	<script>
-		var su = [34,456,45,6,4,265,26,457,4];
-		su.sort(my); //함수 호출시 함수명으로만 호출하는 경우 : call back 유형 호출
+		var su =[23,42,53,42,8856,1234,2536,4,4,7,56,232,3,2,42,4,2,42,56,6,8,9,68];
+		su.sort(my);// 함수 호출시 함수명만 갖고 호출하는 경우를 call back 유형으로 호출한다고 이야기함.
 		console.log(su);
 		
 		su.reverse();
-		console.log(su);		
-		function my(x, y){
+		console.log(su);
+		function my(x,y){
 			var a = Number(x);
 			var b = Number(y);
-			return a-b;
+			return b-a;
 		}
-	</script>
 	
+	</script>
+
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
